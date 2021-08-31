@@ -1,6 +1,6 @@
 # Desafio 1: Restaurante Sabor do Brasil
 
-Olá meu nome e <b>Paola Jacquin</b>, sou dona do renomado restaurante  <b>Sabor do Brasil</b>.
+Olá meu nome e <b>Paola Jacquin</b>, sou dona do renomado restaurante <b>Sabor do Brasil</b>.
 Eu contratei a sua empresa para que vocês desenvolvam um sistema para a gestão do meu restaurante.
 
 O sistema deve ter as seguintes funcionalidades:
@@ -20,7 +20,7 @@ Não podemos ter pessoas de pé dentro do restaurante, sendo assim precisamos ca
 
 ## Gestão dos Pratos
 
-Nosso cardápio é variado e digital, e cada dia temos 4 opções diferentes. O sitema deve permitir o cadastro dessas opções e seus preços por dia.
+Nosso cardápio é variado e digital, e cada dia temos 4 opções diferentes. O sistema deve permitir o cadastro dessas opções e seus preços por dia.
 
 Nossos ingredientes são de altíssima qualidade, sendo assim precisamos controlar o estoque de forma rígida. 
 
@@ -47,7 +47,7 @@ Caso seja dada entrada no estoque de uma quantidade de ingrediente que a soma to
 
 - Apenas os usuários do tipo Estoquista podem cadastrar quantidade em estoque.
 
-- Apenas os usuários do tipo Gerente tem acesso aos relatórios
+- Apenas os usuários do tipo Gerente têm acesso aos relatórios
 
 ## Gestão do Caixa
 
@@ -69,7 +69,9 @@ Não é possível efetuar recebimentos caso a data de fechamento seja diferente 
 
 O Sistema deve ter um relatório por período mostrando o faturamento do dia por caixa, operador e forma de pagamento.
 
-Deve-se ter um relatório para listar os caixas que tiveram problemas de divergência no fechamento, Esse relatório deve conter a data, os valores de diferença, o nome do gerente e o nome do operador de caixa.
+Deve-se ter um relatório para listar os caixas que tiveram problemas de divergência no fechamento.
+
+Esse relatório deve conter a data, os valores de diferença, o nome do gerente e o nome do operador de caixa.
 
 - Apenas os usuários do tipo Operador de Caixa e Gerente podem efetuar o recebimento da conta, abertura e fechamento do caixa.
 - Apenas os usuários do tipo Gerente podem visualizar os relatórios
@@ -135,6 +137,7 @@ E promoção pode ser aplicada em um prato ou em um combo (Combo: Entrada + Prat
 
 Esse é um projeto feito pela comunidade e para a comunidade ❤️. 
 
-Caso tenha alguma dúvida e/ou sugestão, crie uma Isse nesse repositório.
+Caso tenha alguma dúvida e/ou sugestão, crie uma Issue nesse repositório.
 
 Caso encontre algum erro, por favor, abra uma Issue ou nos envie um Pull Request.
+![image](https://user-images.githubusercontent.com/4245518/131501768-6a8f5a00-c706-4f06-86a6-96f287ce395a.png)
