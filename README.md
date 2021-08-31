@@ -133,4 +133,4 @@ E promoção pode ser aplicada em um prato ou em um combo (Combo: Entrada + Prat
 -------
 -------
 
-Esse é um projeto feito pela comunidade e para a comunidade. Caso tenha alguma dúvida e/ou sugestão, crie uma Isse nesse repositório.
+Esse é um projeto feito pela comunidade e para a comunidade ❤️. Caso tenha alguma dúvida e/ou sugestão, crie uma Isse nesse repositório.
