@@ -99,3 +99,38 @@ A promoção pode variar por um horário (Happy Hour), por um dia específico da
 E promoção pode ser aplicada em um prato ou em um combo (Combo: Entrada + Prato Principal + Sobremesa). 
 
 - Apenas os usuários do tipo Gerente podem criar promoções
+
+
+-------
+-------
+
+
+## Informações técnicas
+
+- O projeto deve ser um Web API com C#
+- O projeto deve disponibilizar as APIs via Swagger
+- A escolha da arquitetura é livre
+- A escolha do banco de dados é livre
+
+## O que será avaliado
+
+- Modelagem de Dados
+- Modelagem da Aplicação
+- Aderência aos Requisitos de Negócio
+- Trabalho em Equipe 
+- Gestão de Tarefas (Usar o Projetcs do Github)
+- Cerimônias do Scrum
+- Evolução técnica do time
+
+## Materiais/Conteúdos que serão disponibilizados pelos mentores
+
+- Treinamento em Scrum
+- Documentação da Microsoft (Microsoft Learning)
+- Vídeos sobre temas como Orientação a Objetos, SOLID, Testes Unitários e afins
+- Vídeos periódicos para esclarecimento de dúvidas 
+
+
+-------
+-------
+
+Esse é um projeto feito pela comunidade e para a comunidade. Caso tenha alguma dúvida e/ou sugestão, crie uma Isse nesse repositório.
