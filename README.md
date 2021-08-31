@@ -1,4 +1,4 @@
-# Desafio 1
+# Desafio 1: Restaurante Sabor do Brasil
 
 Olá meu nome e <b>Paola Jacquin</b>, sou dona do renomado restaurante  <b>Sabor do Brasil</b>.
 Eu contratei a sua empresa para que vocês desenvolvam um sistema para a gestão do meu restaurante.
