@@ -7,7 +7,7 @@ O sistema deve ter as seguintes funcionalidades:
 
 ## Gestão da Mesas
 
-Nosso espaço é reservado para até 60 pessoas, cabendo 20 mesas.
+Nosso espaço é reservado para até 120 pessoas, cabendo 20 mesas.
 
 O Sistema deve controlar a abertura e fechamento dessas mesas.
 
@@ -55,7 +55,7 @@ Esta é uma das funcionalidades mais importantes então certifique-se de que o s
 
 Nós podemos ter de 1 a 3 caixas abertos dependendo da quantidade de pessoas no restaurante. 
 
-Caso tenhamos até 20 pessoas, abrimos apenas um caixa, de 21 a 40 pessoas, abrimos o segundo caixa, acima de 41 pessoas, abrimos o terceiro caixa.
+Caso tenhamos até 20 pessoas, abrimos apenas um caixa, de 21 a 50 pessoas, abrimos o segundo caixa, acima de 51 pessoas, abrimos o terceiro caixa.
 
 O Operado de Caixa pode decidir fechar o caixa caso a quantidade de pessoas diminua no restaurante.
 
