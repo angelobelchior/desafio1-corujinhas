@@ -140,4 +140,3 @@ Esse é um projeto feito pela comunidade e para a comunidade ❤️.
 Caso tenha alguma dúvida e/ou sugestão, crie uma Issue nesse repositório.
 
 Caso encontre algum erro, por favor, abra uma Issue ou nos envie um Pull Request.
-![image](https://user-images.githubusercontent.com/4245518/131501768-6a8f5a00-c706-4f06-86a6-96f287ce395a.png)
