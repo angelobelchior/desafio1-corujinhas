@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using RestauranteSaborDoBrasil.Application.Events.Log;
+using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler;
+using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
 using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
 using RestauranteSaborDoBrasil.Domain.Core.Notifications;
 using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
@@ -34,6 +37,11 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
         public static void RegisterApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<INotificationHandler<LogEvent>, RegisterLogEventHandler>();
+
+            services.AddScoped<IRequestHandler<CriarPratoRequest, PratoResponse>, CriarPratoUseCase>();
+            services.AddScoped<IRequestHandler<EditarPratoRequest, PratoResponse>, EditarPratoUseCase>();
+            services.AddScoped<IRequestHandler<ListarPratoRequest, ListarPratoResponse>, ListarPratosUseCase>();
+            services.AddScoped<IRequestHandler<BuscarPratoRequest, PratoResponse>, BuscarPratoPorIdUseCase>();
         }
     }
 }
