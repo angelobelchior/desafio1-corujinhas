@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using RestauranteSaborDoBrasil.Infra.Data.Context;
 using RestauranteSaborDoBrasil.Infra.Data.Context.Configurations;
+using RestauranteSaborDoBrasil.Api.Configurations.Swagger;
 
 namespace RestauranteSaborDoBrasil.Api.Configurations.Api
 {
@@ -46,6 +47,7 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.Api
                             .AllowAnyHeader());
             });
 
+            services.AddSwaggerDocumentation(configuration);
 
             return services;
         }
@@ -55,8 +57,7 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestauranteSaborDoBrasil.Api v1"));
+                app.UseSwaggerDocumentation("RestauranteSaborDoBrasil.Api v1");
             }
 
             app.UpdateDatabase();
