@@ -4,21 +4,48 @@
         <name>RestauranteSaborDoBrasil.Api</name>
     </assembly>
     <members>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.IngredienteController.GetAsync(System.Guid)">
+            <summary>
+            Busca um ingrediente por id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.IngredienteController.GetAsync">
+            <summary>
+            Lista todos os ingredientes cadastrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.IngredienteController.PostAsync(RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request.CriarIngredienteRequest)">
+            <summary>
+            Cria um novo ingrediente
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.IngredienteController.PutAsync(System.Guid,RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request.EditarIngredienteRequest)">
+            <summary>
+            Edita um ingrediente existente
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.PratoController.GetAsync(System.Guid)">
             <summary>
-            Listar prato por id
+            Busca um prato por id
             </summary>
             <returns></returns>
         </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.PratoController.GetAsync">
             <summary>
-            Listar todos os pratos cadastrados
+            Lista todos os pratos cadastrados
             </summary>
             <returns></returns>
         </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.PratoController.PostAsync(RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request.CriarPratoRequest)">
             <summary>
-            Criar um novo prato
+            Cria um novo prato
             </summary>
             <param name="request"></param>
             <returns></returns>

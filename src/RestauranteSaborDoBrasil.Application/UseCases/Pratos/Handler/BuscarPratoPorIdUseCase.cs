@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using RestauranteSaborDoBrasil.Application.UseCases.Base;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
 using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
@@ -11,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler
 {
-    public class BuscarPratoPorIdUseCase : PratoUseCase<BuscarPratoRequest, PratoResponse>
+    public class BuscarPratoPorIdUseCase : UseCaseValidationBase<BuscarPratoRequest, Prato, PratoResponse>
     {
         public BuscarPratoPorIdUseCase(
             IHandler<DomainNotification> notifications, 
             IUnitOfWork unitOfWork, 
-            IMapper mapper, 
-            IBaseRepository<Prato> baseRepository) : base(notifications, unitOfWork, mapper, baseRepository)
+            IBaseRepository<Prato> baseRepository, 
+            IMapper mapper) : base(notifications, unitOfWork, baseRepository, mapper)
         {
         }
 

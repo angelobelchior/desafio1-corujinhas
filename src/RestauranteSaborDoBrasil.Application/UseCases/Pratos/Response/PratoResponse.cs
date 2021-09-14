@@ -15,9 +15,4 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response
             public float Quantidade { get; set; }
         }
     }
-
-    public class ListarPratoResponse : ResponseBase
-    {
-        public List<PratoResponse> Result { get; set; }
-    }
 }

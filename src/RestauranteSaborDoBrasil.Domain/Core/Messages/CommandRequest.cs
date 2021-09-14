@@ -8,7 +8,7 @@ namespace RestauranteSaborDoBrasil.Domain.Core.Messages
     public abstract class CommandRequest<TResponse> : RequestBase, IRequest<TResponse>
     {
         [JsonIgnore]
-        public ValidationResult? ValidationResult { get; set; }
+        public ValidationResult ValidationResult { get; set; }
 
         public virtual bool IsValid()
         {

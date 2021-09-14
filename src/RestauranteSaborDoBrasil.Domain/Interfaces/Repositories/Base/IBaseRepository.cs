@@ -8,6 +8,7 @@ namespace RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base
     public interface IBaseRepository<TEntity> : IDisposable where TEntity : Entity
     {
         Task<TEntity> AddAsync(TEntity entity);
+        TEntity Update(TEntity entity);
 
         Task<TEntity> GetByIdAsync(Guid id);
 

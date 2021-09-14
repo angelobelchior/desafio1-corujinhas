@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using RestauranteSaborDoBrasil.Application.Events.Log;
+using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler;
+using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Response;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
@@ -10,6 +13,7 @@ using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
 using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base;
 using RestauranteSaborDoBrasil.Infra.Data.Repositories.Base;
 using RestauranteSaborDoBrasil.Infra.Data.UoW;
+using System.Collections.Generic;
 
 namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
 {
@@ -40,8 +44,13 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
 
             services.AddScoped<IRequestHandler<CriarPratoRequest, PratoResponse>, CriarPratoUseCase>();
             services.AddScoped<IRequestHandler<EditarPratoRequest, PratoResponse>, EditarPratoUseCase>();
-            services.AddScoped<IRequestHandler<ListarPratoRequest, ListarPratoResponse>, ListarPratosUseCase>();
+            services.AddScoped<IRequestHandler<ListarPratoRequest, List<PratoResponse>>, ListarPratosUseCase>();
             services.AddScoped<IRequestHandler<BuscarPratoRequest, PratoResponse>, BuscarPratoPorIdUseCase>();
+
+            services.AddScoped<IRequestHandler<CriarIngredienteRequest, IngredienteResponse>, CriarIngredienteUseCase>();
+            services.AddScoped<IRequestHandler<EditarIngredienteRequest, IngredienteResponse>, EditarIngredienteUseCase>();
+            services.AddScoped<IRequestHandler<ListarIngredienteRequest, List<IngredienteResponse>>, ListarIngredienteUseCase>();
+            services.AddScoped<IRequestHandler<BuscarIngredienteRequest, IngredienteResponse>, BuscarIngredientePorIdUseCase>();
         }
     }
 }
