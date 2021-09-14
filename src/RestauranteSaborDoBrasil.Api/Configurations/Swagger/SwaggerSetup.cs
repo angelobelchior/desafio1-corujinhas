@@ -21,16 +21,30 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.Swagger
 
                 c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
 
-                OpenApiSecurityScheme secuurityDefinition = new OpenApiSecurityScheme
+                c.AddSecurityDefinition("jwt_token", new OpenApiSecurityScheme
                 {
                     Name = "Bearer",
                     BearerFormat = "JWT",
+                    Scheme = "bearer",
                     Description = "Inform o token de autorização",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http
-                };
+                });
 
-                c.AddSecurityDefinition("jwt_token", secuurityDefinition);
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "jwt_token"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
 
 
             });

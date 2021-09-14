@@ -9,7 +9,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public List<ReceitaRequest> Receita { get; set; }
+        public List<ReceitaRequest> Receitas { get; set; }
 
         public class ReceitaRequest
         {

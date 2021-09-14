@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using RestauranteSaborDoBrasil.Application.UseCases.Base;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
 using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
@@ -11,22 +12,18 @@ using System.Threading.Tasks;
 
 namespace RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler
 {
-    public class CriarPratoUseCase : PratoUseCase<CriarPratoRequest, PratoResponse>
+    public class CriarPratoUseCase : UseCaseValidationBase<CriarPratoRequest, Prato, PratoResponse>
     {
         public CriarPratoUseCase(
             IHandler<DomainNotification> notifications, 
             IUnitOfWork unitOfWork, 
-            IMapper mapper, 
-            IBaseRepository<Prato> baseRepository) : base(notifications, unitOfWork, mapper, baseRepository)
+            IBaseRepository<Prato> baseRepository, 
+            IMapper mapper) : base(notifications, unitOfWork, baseRepository, mapper)
         {
         }
 
         public override async Task<PratoResponse> Handle(CriarPratoRequest request, CancellationToken cancellationToken)
-        {
-            var result = await base.RegistrarPrato(request);
-            await CommitAsync();
+            => await base.RegisterAsync(request);
 
-            return result;
-        }
     }
 }
