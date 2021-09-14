@@ -9,7 +9,7 @@ namespace RestauranteSaborDoBrasil.Domain.Models
         public Guid IngredienteId { get; set; }
         public float Quantidade { get; set; }
 
-        public Prato Prato { get; set; }
-        public Ingrediente Ingrediente { get; set; }
+        public virtual Prato Prato { get; set; }
+        public virtual Ingrediente Ingrediente { get; set; }
     }
 }

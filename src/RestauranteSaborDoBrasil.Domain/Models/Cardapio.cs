@@ -7,6 +7,6 @@ namespace RestauranteSaborDoBrasil.Domain.Models
     public class Cardapio : Entity
     {
         public DiaSemana DiaSemana { get; set; }
-        public ICollection<PratoCardapio> Pratos { get; set; }
+        public virtual ICollection<PratoCardapio> Pratos { get; set; }
     }
 }

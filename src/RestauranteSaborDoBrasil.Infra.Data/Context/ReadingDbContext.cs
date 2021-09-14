@@ -22,6 +22,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Context
 
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging(true);
+            optionsBuilder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

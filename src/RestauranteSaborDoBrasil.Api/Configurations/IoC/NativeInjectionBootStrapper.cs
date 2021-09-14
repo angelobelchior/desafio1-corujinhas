@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using RestauranteSaborDoBrasil.Application.Events.Log;
+using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler;
+using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Response;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Response;
@@ -51,6 +54,11 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
             services.AddScoped<IRequestHandler<EditarIngredienteRequest, IngredienteResponse>, EditarIngredienteUseCase>();
             services.AddScoped<IRequestHandler<ListarIngredienteRequest, List<IngredienteResponse>>, ListarIngredienteUseCase>();
             services.AddScoped<IRequestHandler<BuscarIngredienteRequest, IngredienteResponse>, BuscarIngredientePorIdUseCase>();
+
+            services.AddScoped<IRequestHandler<CriarCardapioRequest, CardapioResponse>, CriarCardapioUseCase>();
+            services.AddScoped<IRequestHandler<EditarCardapioRequest, CardapioResponse>, EditarCardapioUseCase>();
+            services.AddScoped<IRequestHandler<ListarCardapioRequest, List<CardapioResponse>>, ListarCardapiosUseCase>();
+            services.AddScoped<IRequestHandler<BuscarCardapioRequest, CardapioResponse>, BuscarCardapioPorIdUseCase>();
         }
     }
 }
