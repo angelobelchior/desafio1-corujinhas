@@ -14,10 +14,12 @@ namespace RestauranteSaborDoBrasil.Application.Validations.Ingredientes
                 .MaximumLength(200);
 
             RuleFor(x => x.EstoqueMinimo)
+                .GreaterThan(0)
                 .NotNull();
 
-            RuleFor(x => x.EstoqueMaximo)
-                .NotNull();
+            RuleFor(x => x)
+                .Must(x => x.EstoqueMaximo > x.EstoqueMinimo)
+                .WithMessage("Estoque Máximo dever ser maior que o estoque mínimo");
         }
     }
 }

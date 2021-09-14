@@ -9,7 +9,7 @@ namespace RestauranteSaborDoBrasil.Domain.Models
         public Guid CardapioId { get; set; }
         public float Preco { get; set; }
 
-        public Prato Prato { get; set; }
-        public Cardapio Cardapio { get; set; }
+        public virtual Prato Prato { get; set; }
+        public virtual Cardapio Cardapio { get; set; }
     }
 }

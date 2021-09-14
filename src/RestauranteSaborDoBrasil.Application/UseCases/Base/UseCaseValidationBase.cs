@@ -84,7 +84,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
 
         protected async Task<TResponse> Listar()
         {
-            var domainModels = await BaseRepository.GetAllQueryNoTracking
+            var domainModels = await BaseRepository.GetAllQuery
                 .ToListAsync();
 
             return Mapper.Map<TResponse>(domainModels);
