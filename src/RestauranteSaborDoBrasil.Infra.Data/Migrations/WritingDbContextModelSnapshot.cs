@@ -31,6 +31,9 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DiaSemana")
+                        .IsUnique();
+
                     b.ToTable("Cardapio");
                 });
 
@@ -143,7 +146,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("CardapioId");
 
-                    b.HasIndex("PratoId");
+                    b.HasIndex("PratoId", "CardapioId")
+                        .IsUnique();
 
                     b.ToTable("PratoCardapio");
                 });
@@ -167,7 +171,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("IngredienteId");
 
-                    b.HasIndex("PratoId");
+                    b.HasIndex("PratoId", "IngredienteId")
+                        .IsUnique();
 
                     b.ToTable("Receita");
                 });

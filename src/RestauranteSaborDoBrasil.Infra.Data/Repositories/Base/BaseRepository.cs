@@ -47,8 +47,13 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Repositories.Base
 
         public TEntity Update(TEntity entity)
         {
-            WritingDb.Update(entity);
+            WritingDbSet.Update(entity);
             return entity;
+        }
+
+        public void Delete(TEntity entity)
+        {
+            WritingDbSet.Remove(entity);
         }
  
         public async Task<TEntity> GetByIdAsync(Guid id)

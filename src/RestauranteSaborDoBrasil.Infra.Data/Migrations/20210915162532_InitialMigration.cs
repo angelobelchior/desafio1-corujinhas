@@ -135,6 +135,12 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Cardapio_DiaSemana",
+                table: "Cardapio",
+                column: "DiaSemana",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_MovimentacaoEstoque_IngredienteId",
                 table: "MovimentacaoEstoque",
                 column: "IngredienteId");
@@ -145,9 +151,10 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                 column: "CardapioId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PratoCardapio_PratoId",
+                name: "IX_PratoCardapio_PratoId_CardapioId",
                 table: "PratoCardapio",
-                column: "PratoId");
+                columns: new[] { "PratoId", "CardapioId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Receita_IngredienteId",
@@ -155,9 +162,10 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                 column: "IngredienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Receita_PratoId",
+                name: "IX_Receita_PratoId_IngredienteId",
                 table: "Receita",
-                column: "PratoId");
+                columns: new[] { "PratoId", "IngredienteId" },
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
