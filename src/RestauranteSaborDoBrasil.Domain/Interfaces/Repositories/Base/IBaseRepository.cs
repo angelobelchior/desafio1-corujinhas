@@ -9,6 +9,7 @@ namespace RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base
     {
         Task<TEntity> AddAsync(TEntity entity);
         TEntity Update(TEntity entity);
+        void Delete(TEntity entity);
 
         Task<TEntity> GetByIdAsync(Guid id);
 

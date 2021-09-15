@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
-using RestauranteSaborDoBrasil.Application.Events.Log;
+using RestauranteSaborDoBrasil.Application.Events.LogApp;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Receitas.Request;
 using RestauranteSaborDoBrasil.Domain.Models;
 using System;
 using System.Linq;
@@ -28,15 +29,12 @@ namespace RestauranteSaborDoBrasil.Application.AutoMapper
                     }).ToList();
                 });
             CreateMap<EditarPratoRequest, Prato>()
-                .AfterMap((src, dest) => {
-                    dest.Receitas = src.Receitas.Select(x => new Receita
-                    {
-                        Id = Guid.NewGuid(),
-                        IngredienteId = x.IngredienteId,
-                        PratoId = dest.Id,
-                        Quantidade = x.Quantidade
-                    }).ToList();
-                });
+                .ForMember(dest => dest.Receitas, opt => opt.Ignore());
+
+            CreateMap<PratoRequest.ReceitaRequest, ReceitaRequest.Ingrediente>();
+            CreateMap<EditarPratoRequest, EditarReceitaRequest>()
+                .ForMember(dest => dest.PratoId, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Ingredientes, opt => opt.MapFrom(src => src.Receitas));
         }
     }
 }

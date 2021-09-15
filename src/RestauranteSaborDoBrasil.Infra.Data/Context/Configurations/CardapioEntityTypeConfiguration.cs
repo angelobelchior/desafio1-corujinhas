@@ -16,6 +16,9 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Context.Configurations
             builder.Property(x => x.DiaSemana)
                 .HasColumnType("varchar(50)")
                 .HasConversion(new EnumToStringConverter<DiaSemana>());
+
+            builder.HasIndex(x => x.DiaSemana)
+                .IsUnique();
         }
     }
 }

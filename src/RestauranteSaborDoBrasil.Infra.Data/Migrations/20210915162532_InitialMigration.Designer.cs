@@ -10,7 +10,7 @@ using RestauranteSaborDoBrasil.Infra.Data.Context;
 namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 {
     [DbContext(typeof(WritingDbContext))]
-    [Migration("20210914122110_InitialMigration")]
+    [Migration("20210915162532_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DiaSemana")
+                        .IsUnique();
 
                     b.ToTable("Cardapio");
                 });
@@ -145,7 +148,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("CardapioId");
 
-                    b.HasIndex("PratoId");
+                    b.HasIndex("PratoId", "CardapioId")
+                        .IsUnique();
 
                     b.ToTable("PratoCardapio");
                 });
@@ -169,7 +173,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("IngredienteId");
 
-                    b.HasIndex("PratoId");
+                    b.HasIndex("PratoId", "IngredienteId")
+                        .IsUnique();
 
                     b.ToTable("Receita");
                 });

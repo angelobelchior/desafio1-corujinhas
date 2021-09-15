@@ -10,6 +10,8 @@ using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Response;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
+using RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler;
+using RestauranteSaborDoBrasil.Application.UseCases.Receitas.Request;
 using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
 using RestauranteSaborDoBrasil.Domain.Core.Notifications;
 using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
@@ -59,6 +61,8 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
             services.AddScoped<IRequestHandler<EditarCardapioRequest, CardapioResponse>, EditarCardapioUseCase>();
             services.AddScoped<IRequestHandler<ListarCardapioRequest, List<CardapioResponse>>, ListarCardapiosUseCase>();
             services.AddScoped<IRequestHandler<BuscarCardapioRequest, CardapioResponse>, BuscarCardapioPorIdUseCase>();
+
+            services.AddScoped<IRequestHandler<EditarReceitaRequest, bool>, EditarReceitaUseCase>();
         }
     }
 }

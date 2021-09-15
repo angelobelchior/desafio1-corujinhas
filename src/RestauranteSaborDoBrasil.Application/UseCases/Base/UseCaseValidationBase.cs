@@ -30,7 +30,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
             BaseRepository = baseRepository;
         }
 
-        private bool RequestValidation(TRequest request)
+        protected bool RequestValidation(TRequest request)
         {
             if (!request.IsValid())
                 NotifyValidationErrors(request.ValidationResult);
@@ -53,7 +53,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
             }
 
             var registerResponse = Mapper.Map<TResponse>(registerModel);
-            return registerResponse;
+            return await BuscarPorId(registerModel.Id);
         }
 
         protected async Task<TResponse> UpdateAsync(TRequest request, Guid id)
@@ -62,6 +62,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
                 return default;
 
             var updateModel = await BaseRepository.GetByIdAsync(id);
+
             if (updateModel == null)
             {
                 Notifications.Handle(DomainNotification.Error(nameof(TDomainModel), $"{nameof(TDomainModel)} não encontrado!"));
@@ -74,12 +75,30 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
 
             if (!await CommitAsync())
             {
-                var errorMessage = $"Commit could not be performed for '{JsonSerializer.Serialize(request)}'";
+                var errorMessage = $"Commit não pôde ser realizado para '{JsonSerializer.Serialize(request)}'";
                 Notifications.Handle(DomainNotification.Error("UseCaseValidationBase", errorMessage));
             }
 
+            return await BuscarPorId(id);
+        }
 
-            return Mapper.Map<TResponse>(updateModel);
+        protected async Task<TResponse> UpdateAsync(TDomainModel updateModel)
+        {
+            if (await BaseRepository.GetByIdAsync(updateModel.Id) == null)
+            {
+                Notifications.Handle(DomainNotification.Error(nameof(TDomainModel), $"{nameof(TDomainModel)} não encontrado!"));
+                return default;
+            }
+
+            BaseRepository.Update(updateModel);
+
+            if (!await CommitAsync())
+            {
+                var errorMessage = $"Commit não pôde ser realizado para '{JsonSerializer.Serialize(updateModel)}'";
+                Notifications.Handle(DomainNotification.Error("UseCaseValidationBase", errorMessage));
+            }
+
+            return await BuscarPorId(updateModel.Id);
         }
 
         protected async Task<TResponse> Listar()

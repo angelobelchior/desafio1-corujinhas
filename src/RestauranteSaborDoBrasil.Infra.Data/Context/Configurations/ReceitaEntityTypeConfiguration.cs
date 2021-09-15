@@ -14,6 +14,9 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Context.Configurations
                 .WithMany(f => f.Receitas)
                 .HasForeignKey(x => x.PratoId);
 
+            builder.HasIndex(x => new { x.PratoId, x.IngredienteId })
+                .IsUnique();
+
             builder.HasOne(x => x.Ingrediente)
                 .WithMany(f => f.Receitas)
                 .HasForeignKey(x => x.IngredienteId);
