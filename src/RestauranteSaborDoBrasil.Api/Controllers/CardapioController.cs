@@ -32,6 +32,18 @@ namespace RestauranteSaborDoBrasil.Api.Controllers
         public async Task<ActionResult<CardapioResponse>> GetAsync(Guid id)
             => CustomResponse(StatusCodes.Status200OK, await _mediator.Send(new BuscarCardapioRequest { Id = id }));
 
+        /// <summary>
+        /// Lista o cardápio do dia
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("dia")]
+        [SwaggerResponse(StatusCodes.Status200OK, null, typeof(CardapioResponse))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, null, typeof(ValidationProblemDetails))]
+        public async Task<ActionResult<CardapioResponse>> GetDiaAsync()
+        {
+            var result = await _mediator.Send(new BuscarCardapioDiaRequest());
+            return CustomResponse(StatusCodes.Status200OK, result);
+        }
 
         /// <summary>
         /// Lista todos os cardápios cadastrados

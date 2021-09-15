@@ -61,6 +61,7 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
             services.AddScoped<IRequestHandler<EditarCardapioRequest, CardapioResponse>, EditarCardapioUseCase>();
             services.AddScoped<IRequestHandler<ListarCardapioRequest, List<CardapioResponse>>, ListarCardapiosUseCase>();
             services.AddScoped<IRequestHandler<BuscarCardapioRequest, CardapioResponse>, BuscarCardapioPorIdUseCase>();
+            services.AddScoped<IRequestHandler<BuscarCardapioDiaRequest, CardapioResponse>, BuscarCardapioPorDiaUseCase>();
 
             services.AddScoped<IRequestHandler<EditarReceitaRequest, bool>, EditarReceitaUseCase>();
         }

@@ -10,6 +10,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.CardapioController.GetDiaAsync">
+            <summary>
+            Lista o cardápio do dia
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.CardapioController.GetAsync">
             <summary>
             Lista todos os cardápios cadastrados
