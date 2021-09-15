@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using RestauranteSaborDoBrasil.Application.Events.Log;
+using RestauranteSaborDoBrasil.Application.Events.LogApp;
 using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Response;
