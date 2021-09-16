@@ -46,7 +46,7 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.Swagger
                     }
                 });
 
-
+                c.CustomSchemaIds(x => x.FullName);
             });
         }
 

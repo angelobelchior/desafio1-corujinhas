@@ -16,6 +16,8 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler
     public class EditarReceitaUseCase : UseCaseValidationBase<EditarReceitaRequest, Receita, bool>
     {
         private readonly IBaseRepository<Receita> _repository;
+        private bool isCommit = false;
+
         public EditarReceitaUseCase(
             IHandler<DomainNotification> notifications, 
             IUnitOfWork unitOfWork, 
@@ -29,7 +31,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler
         {
             await RemoverIngredientesAntigos(request);
             await AddNovosIngredientes(request);
-            return await CommitAsync();
+            return isCommit != true || await CommitAsync();
         }
 
 
@@ -39,7 +41,10 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler
             foreach (var ingrediente in ingredientes)
             {
                 if (!request.Ingredientes.Any(x => x.IngredienteId.Equals(ingrediente.IngredienteId) && x.Quantidade.Equals(ingrediente.Quantidade)))
+                {
                     _repository.Delete(ingrediente);
+                    isCommit = isCommit == false || isCommit;
+                }
             }
         }
 
@@ -51,8 +56,12 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler
                      .FirstOrDefaultAsync(x => x.PratoId.Equals(request.PratoId) && x.IngredienteId.Equals(ingrediente.IngredienteId));
 
                 if (exist == null)
+                {
                     await _repository.AddAsync(new Receita { PratoId = request.PratoId, IngredienteId = ingrediente.IngredienteId, Quantidade = ingrediente.Quantidade });
+                    isCommit = isCommit == false || isCommit;
+                }
             }
         }
+   
     }
 }

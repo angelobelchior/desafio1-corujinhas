@@ -13,6 +13,6 @@ namespace RestauranteSaborDoBrasil.Domain.Models
         public virtual IEnumerable<PratoCardapio> Cardapios { get; set; }
 
         public bool PossuiIngredientes()
-            => Receitas.All(x => x.Quantidade >= x.Ingrediente.EstoqueAtual);
+            => Receitas.All(x => x.Quantidade >= x.Ingrediente.EstoqueMinimo);
     }
 }
