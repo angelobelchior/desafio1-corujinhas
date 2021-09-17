@@ -9,10 +9,12 @@ namespace RestauranteSaborDoBrasil.Application.Validations.Cardapios
         public CardapioRequestValidation()
         {
             RuleFor(x => x.DiaSemana)
-                .IsInEnum();
+                .IsInEnum()
+                .WithMessage(ApplicationResources.DiaSemanaIsNotValid);
 
             RuleFor(x => x.Pratos)
-                .NotEmpty();
+                .NotEmpty()
+                .WithMessage(ApplicationResources.PratosIsNotValid);
         }
     }
 }

@@ -2,6 +2,7 @@
 using RestauranteSaborDoBrasil.Commons.Tests.Base;
 using RestauranteSaborDoBrasil.Commons.Tests.Builders;
 using RestauranteSaborDoBrasil.Application.Validations.Cardapios;
+using RestauranteSaborDoBrasil.Application;
 
 namespace RestauranteSaborDoBrasil.Unit.Tests.Application.Validations.Cardapios
 {
@@ -27,7 +28,7 @@ namespace RestauranteSaborDoBrasil.Unit.Tests.Application.Validations.Cardapios
             #endregion
 
             #region Assert
-            ErrorsContains(result, "*'Id' must not be empty.*");
+            ErrorsContains(result, $"*{ApplicationResources.CardapioIdIsNotValid}*");
             #endregion
         }
     }

@@ -5,6 +5,7 @@ using RestauranteSaborDoBrasil.Commons.Tests.Base;
 using RestauranteSaborDoBrasil.Commons.Tests.Builders;
 using RestauranteSaborDoBrasil.Application.Validations.Cardapios;
 using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request;
+using RestauranteSaborDoBrasil.Application;
 
 namespace RestauranteSaborDoBrasil.Unit.Tests.Application.Validations.Cardapios
 {
@@ -30,7 +31,7 @@ namespace RestauranteSaborDoBrasil.Unit.Tests.Application.Validations.Cardapios
             #endregion
 
             #region Assert
-            ErrorsContains(result, "*'Dia Semana' has a range of values which does not include '999'.*");
+            ErrorsContains(result, $"*{ApplicationResources.DiaSemanaIsNotValid}*");
             #endregion
         }
 
@@ -47,7 +48,7 @@ namespace RestauranteSaborDoBrasil.Unit.Tests.Application.Validations.Cardapios
             #endregion
 
             #region Assert
-            ErrorsContains(result, "*'Pratos' must not be empty.*");
+            ErrorsContains(result, $"*{ApplicationResources.PratosIsNotValid}*");
             #endregion
         }
     }

@@ -9,7 +9,8 @@ namespace RestauranteSaborDoBrasil.Application.Validations.Cardapios
         {
             RuleFor(x => x.Id)
                   .NotNull()
-                  .NotEmpty();
+                  .NotEmpty()
+                  .WithMessage(ApplicationResources.CardapioIdIsNotValid);
         }
     }
 }
