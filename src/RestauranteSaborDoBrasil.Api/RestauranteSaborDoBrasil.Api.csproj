@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>RestauranteSaborDoBrasil.Api.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>

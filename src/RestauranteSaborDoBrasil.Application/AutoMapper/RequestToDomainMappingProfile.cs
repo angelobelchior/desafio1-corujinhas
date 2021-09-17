@@ -18,7 +18,7 @@ namespace RestauranteSaborDoBrasil.Application.AutoMapper
 
             CreateMap<CriarIngredienteRequest, Ingrediente>();
             CreateMap<EditarIngredienteRequest, Ingrediente>();
-            
+
             CreateMap<PratoRequest.ReceitaRequest, Receita>();
             CreateMap<CriarPratoRequest, Prato>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
