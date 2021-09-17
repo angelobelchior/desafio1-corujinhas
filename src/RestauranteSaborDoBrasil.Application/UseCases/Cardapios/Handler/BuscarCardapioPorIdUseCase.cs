@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler
 {
-    public class BuscarCardapioPorIdUseCase : UseCaseValidationBase<BuscarCardapioRequest, Prato, CardapioResponse>
+    public class BuscarCardapioPorIdUseCase : UseCaseValidationBase<BuscarCardapioRequest, Cardapio, CardapioResponse>
     {
         public BuscarCardapioPorIdUseCase(
             IHandler<DomainNotification> notifications,
             IUnitOfWork unitOfWork,
-            IBaseRepository<Prato> baseRepository,
+            IBaseRepository<Cardapio> baseRepository,
             IMapper mapper) : base(notifications, unitOfWork, baseRepository, mapper)
         {
         }

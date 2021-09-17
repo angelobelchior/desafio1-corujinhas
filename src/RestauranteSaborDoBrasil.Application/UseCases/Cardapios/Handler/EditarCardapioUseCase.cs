@@ -48,8 +48,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler
             foreach (var prato in pratos)
             {
                 if (!request.Pratos.Any(x => x.PratoId.Equals(prato.PratoId) && x.Preco.Equals(prato.Preco)))
-                    _repository.Delete(prato);
-                
+                    _repository.Delete(prato);   
             }
         }
 
@@ -62,7 +61,6 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler
 
                 if (exist == null)
                     await _repository.AddAsync(new PratoCardapio { CardapioId = request.Id, PratoId = prato.PratoId, Preco = prato.Preco });
-                
             }
         }
     }

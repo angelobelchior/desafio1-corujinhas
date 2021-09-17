@@ -1,18 +1,17 @@
-﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
-using RestauranteSaborDoBrasil.Application.UseCases.Base;
-using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request;
-using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Response;
-using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
-using RestauranteSaborDoBrasil.Domain.Core.Notifications;
-using RestauranteSaborDoBrasil.Domain.Enums;
-using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
-using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base;
-using RestauranteSaborDoBrasil.Domain.Models;
-using System;
-using System.Linq;
+﻿using System;
+using AutoMapper;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using RestauranteSaborDoBrasil.Domain.Enums;
+using RestauranteSaborDoBrasil.Domain.Models;
+using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
+using RestauranteSaborDoBrasil.Application.UseCases.Base;
+using RestauranteSaborDoBrasil.Domain.Core.Notifications;
+using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
+using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base;
+using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Response;
 
 namespace RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler
 {

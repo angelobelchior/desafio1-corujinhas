@@ -17,9 +17,11 @@ namespace RestauranteSaborDoBrasil.Application.Events.LogApp
         public RegisterLogEventHandler(
             IBaseRepository<Domain.Models.Log> baseRepository,
             IHandler<DomainNotification> notifications, 
-            IUnitOfWork unitOfWork) : base(notifications, unitOfWork)
+            IUnitOfWork unitOfWork,
+            IMapper mapper) : base(notifications, unitOfWork)
         {
             _baseRepository = baseRepository;
+            _mapper = mapper;
         }
 
         public override async Task Handle(LogEvent notification, CancellationToken cancellationToken)
