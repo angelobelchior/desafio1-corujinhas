@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Base.UseCaseBase&lt;TRequest, TResponse&gt;" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAgAAAAAgAAAAAAAAAAAAIAAAAAAAAAACA=</HashCode>
+      <FileName>UseCases\Base\UseCaseBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Base.UseCaseValidationBase&lt;TRequest, TDomainModel, TResponse&gt;" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAACAAAAAAAEAAAAAggAAAAAAAgAIA=</HashCode>
+      <FileName>UseCases\Base\UseCaseValidationBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler.BuscarCardapioPorDiaUseCase" Collapsed="true">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABIAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Handler\BuscarCardapioPorDiaUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler.BuscarCardapioPorIdUseCase" Collapsed="true">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Handler\BuscarCardapioPorIdUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler.CriarCardapioUseCase" Collapsed="true">
+    <Position X="22" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Handler\CriarCardapioUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler.EditarCardapioUseCase" Collapsed="true">
+    <Position X="24.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABAAAAAAAABAAAAAAAAAAIAAAAAAAAAACA=</HashCode>
+      <FileName>UseCases\Cardapios\Handler\EditarCardapioUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler.ListarCardapiosUseCase" Collapsed="true">
+    <Position X="26.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Handler\ListarCardapiosUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request.CardapioRequest" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Request\CardapioRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request.CriarCardapioRequest" Collapsed="true">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Cardapios\Request\CriarCardapioRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Request.EditarCardapioRequest" Collapsed="true">
+    <Position X="12.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>UseCases\Cardapios\Request\EditarCardapioRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler.BuscarIngredientePorIdUseCase" Collapsed="true">
+    <Position X="28.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Handler\BuscarIngredientePorIdUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler.CriarIngredienteUseCase" Collapsed="true">
+    <Position X="31" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Handler\CriarIngredienteUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler.EditarIngredienteUseCase" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Handler\EditarIngredienteUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler.ListarIngredienteUseCase" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Handler\ListarIngredienteUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request.CriarIngredienteRequest" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Request\CriarIngredienteRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request.EditarIngredienteRequest" Collapsed="true">
+    <Position X="2.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>UseCases\Ingredientes\Request\EditarIngredienteRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request.IngredienteRequest" Collapsed="true">
+    <Position X="1.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>UseCases\Ingredientes\Request\IngredienteRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler.BuscarPratoPorIdUseCase" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Pratos\Handler\BuscarPratoPorIdUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler.CriarPratoUseCase" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Pratos\Handler\CriarPratoUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler.EditarPratoUseCase" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Pratos\Handler\EditarPratoUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler.ListarPratosUseCase" Collapsed="true">
+    <Position X="19.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Pratos\Handler\ListarPratosUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request.CriarPratoRequest" Collapsed="true">
+    <Position X="5.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Pratos\Request\CriarPratoRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request.EditarPratoRequest" Collapsed="true">
+    <Position X="7.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>UseCases\Pratos\Request\EditarPratoRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request.PratoRequest" Collapsed="true">
+    <Position X="6.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>UseCases\Pratos\Request\PratoRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Receitas.Handler.EditarReceitaUseCase" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAAAABAAAAAAAAAAAAIAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Receitas\Handler\EditarReceitaUseCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Receitas.Request.EditarReceitaRequest" Collapsed="true">
+    <Position X="10.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Receitas\Request\EditarReceitaRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.UseCases.Receitas.Request.ReceitaRequest" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UseCases\Receitas\Request\ReceitaRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Cardapios.CardapioRequestValidation&lt;TRequest&gt;" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Cardapios\CardapioRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Cardapios.CriarCardapioRequestValidation" Collapsed="true">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Cardapios\CriarCardapioRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Cardapios.EditarCardapioRequestValidation" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Cardapios\EditarCardapioRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Ingredientes.CriarIngredienteRequestValidation" Collapsed="true">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Ingredientes\CriarIngredienteRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Ingredientes.EditarIngredienteRequestValidation" Collapsed="true">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Ingredientes\EditarIngredienteRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Ingredientes.IngredienteRequestValidation&lt;TRequest&gt;" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Ingredientes\IngredienteRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Pratos.CriarPratoRequestValidation" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Pratos\CriarPratoRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Pratos.EditarPratoRequestValidation" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Pratos\EditarPratoRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Validations.Pratos.PratoRequestValidation&lt;TRequest&gt;" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\Pratos\PratoRequestValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Events.Base.EventHandlerBase&lt;TEvent&gt;" Collapsed="true">
+    <Position X="5.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgAAAAAgAAAAAAAAAAAAIAAAAAAAAAACA=</HashCode>
+      <FileName>Events\Base\EventHandlerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Application.Events.LogApp.RegisterLogEventHandler" Collapsed="true">
+    <Position X="5.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABIAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\LogApp\RegisterLogEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
