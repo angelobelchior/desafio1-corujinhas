@@ -36,6 +36,3 @@ dotnet tool install --global dotnet-ef
 
 ==> Command to list all dotnet Tools installed
 dotnet tool list
-
-==> command to upgrade a specific database without having to change the environment
-PMC: $env:ASPNETCORE_ENVIRONMENT="DIT"
