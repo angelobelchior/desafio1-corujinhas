@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestauranteSaborDoBrasil.Infra.Data.Context;
 
 namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 {
     [DbContext(typeof(WritingDbContext))]
-    partial class WritingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210922215940_AddMesa")]
+    partial class AddMesa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
