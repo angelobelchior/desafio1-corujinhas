@@ -7,6 +7,9 @@ using RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Response;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Ingredientes.Response;
+using RestauranteSaborDoBrasil.Application.UseCases.Mesas.Handler;
+using RestauranteSaborDoBrasil.Application.UseCases.Mesas.Request;
+using RestauranteSaborDoBrasil.Application.UseCases.Mesas.Response;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Request;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Response;
@@ -62,6 +65,9 @@ namespace RestauranteSaborDoBrasil.Api.Configurations.IoC
             services.AddScoped<IRequestHandler<ListarCardapioRequest, List<CardapioResponse>>, ListarCardapiosUseCase>();
             services.AddScoped<IRequestHandler<BuscarCardapioRequest, CardapioResponse>, BuscarCardapioPorIdUseCase>();
             services.AddScoped<IRequestHandler<BuscarCardapioDiaRequest, CardapioResponse>, BuscarCardapioPorDiaUseCase>();
+
+            services.AddScoped<IRequestHandler<ListarMesaRequest, List<MesaResponse>>, ListarMesaUseCase>();
+            services.AddScoped<IRequestHandler<BuscarMesaPorIdRequest, MesaResponse>, BuscarMesaPorIdUseCase>();
 
             services.AddScoped<IRequestHandler<EditarReceitaRequest, bool>, EditarReceitaUseCase>();
         }

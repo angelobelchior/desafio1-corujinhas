@@ -10,6 +10,6 @@ namespace RestauranteSaborDoBrasil.Domain.Models
         public DateTime DataAbertura { get; set; }
         public DateTime DataFechamento { get; set; }
 
-        public Mesa Mesa { get; set; }
+        public virtual Mesa Mesa { get; set; }
     }
 }

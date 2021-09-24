@@ -64,6 +64,18 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.MesaController.GetAsync">
+            <summary>
+            Lista todas as mesas cadastradas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.MesaController.GetAsync(System.Guid)">
+            <summary>
+            Busca mesa por ID
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.PratoController.GetAsync(System.Guid)">
             <summary>
             Busca um prato por id
