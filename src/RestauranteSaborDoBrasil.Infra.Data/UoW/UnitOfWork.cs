@@ -5,7 +5,7 @@ using System;
 
 namespace RestauranteSaborDoBrasil.Infra.Data.UoW
 {
-    public class UnitOfWork : IUnitOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly WritingDbContext _context;
 
