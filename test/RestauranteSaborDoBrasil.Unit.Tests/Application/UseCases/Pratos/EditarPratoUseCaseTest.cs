@@ -1,25 +1,23 @@
 ﻿using Moq;
 using Xunit;
 using System;
+using MediatR;
 using System.Threading.Tasks;
 using RestauranteSaborDoBrasil.Domain.Models;
 using RestauranteSaborDoBrasil.Commons.Tests.Base;
 using RestauranteSaborDoBrasil.Commons.Tests.Builders;
 using RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler;
 using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base;
-using MediatR;
 using RestauranteSaborDoBrasil.Application.UseCases.Receitas.Request;
 
 namespace RestauranteSaborDoBrasil.Unit.Tests.Application.UseCases.Pratos
 {
     public class EditarPratoUseCaseTest : BaseTest
     {
-        private readonly Mock<IMediator> _mediator;
         private readonly Mock<IBaseRepository<Prato>> _baseRepository;
 
         public EditarPratoUseCaseTest()
         {
-            _mediator = new Mock<IMediator>();
             _baseRepository = new Mock<IBaseRepository<Prato>>();
         }
 

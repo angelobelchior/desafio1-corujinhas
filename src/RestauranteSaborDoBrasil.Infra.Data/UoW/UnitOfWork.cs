@@ -1,10 +1,11 @@
 ﻿using RestauranteSaborDoBrasil.Domain.Interfaces.Repositories;
 using RestauranteSaborDoBrasil.Infra.Data.Context;
 using System.Threading.Tasks;
+using System;
 
 namespace RestauranteSaborDoBrasil.Infra.Data.UoW
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly WritingDbContext _context;
 
@@ -26,6 +27,12 @@ namespace RestauranteSaborDoBrasil.Infra.Data.UoW
         }
 
         public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
         {
             _context.Dispose();
         }

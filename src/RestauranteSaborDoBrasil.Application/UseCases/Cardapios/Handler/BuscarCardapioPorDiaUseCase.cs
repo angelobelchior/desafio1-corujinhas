@@ -34,7 +34,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Cardapios.Handler
         {
             var diaAtual = (DiaSemana)DateTime.UtcNow.DayOfWeek;
             var cardapio = await _baseRepository.GetAllQuery
-                .FirstOrDefaultAsync(c => c.DiaSemana == diaAtual);
+                .FirstOrDefaultAsync(c => c.DiaSemana == diaAtual, cancellationToken);
 
             if (cardapio == null)
                 return default;

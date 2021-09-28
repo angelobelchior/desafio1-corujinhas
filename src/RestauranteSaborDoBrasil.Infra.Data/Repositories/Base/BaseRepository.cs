@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteSaborDoBrasil.Infra.Data.Repositories.Base
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : Entity
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : Entity
     {
         protected DbSet<TEntity> ReadingDbSet { get; }
         protected DbSet<TEntity> WritingDbSet { get; }
@@ -61,9 +61,14 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Repositories.Base
 
         public void Dispose()
         {
-            ReadingDb.Dispose();
-            WritingDb.Dispose();    
+            Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            ReadingDb.Dispose();
+            WritingDb.Dispose();
         }
     }
 }
