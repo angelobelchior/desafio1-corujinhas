@@ -6,7 +6,7 @@ using System;
 
 namespace RestauranteSaborDoBrasil.Domain.Core.Notifications
 {
-    public class DomainNotificationHandler : IHandler<DomainNotification>, IDisposable
+    public class DomainNotificationHandler : IHandler<DomainNotification>
     {
         private List<DomainNotification> _notifications;
         private readonly ILogger<DomainNotificationHandler> _logger;

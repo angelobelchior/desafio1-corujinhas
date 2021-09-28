@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteSaborDoBrasil.Infra.Data.Repositories.Base
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : Entity
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : Entity
     {
         protected DbSet<TEntity> ReadingDbSet { get; }
         protected DbSet<TEntity> WritingDbSet { get; }
