@@ -12,7 +12,7 @@ namespace RestauranteSaborDoBrasil.Api.Controllers.Base
     {
         protected IHandler<DomainNotification> Notifications { get; }
 
-        public MainController(IHandler<DomainNotification> notifications)
+        protected MainController(IHandler<DomainNotification> notifications)
         {
             Notifications = notifications;
         }

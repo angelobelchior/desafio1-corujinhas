@@ -4,15 +4,15 @@
         <name>RestauranteSaborDoBrasil.Api</name>
     </assembly>
     <members>
-        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.CardapioController.GetAsync(System.Guid)">
-            <summary>
-            Busca um cardápio por id
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:RestauranteSaborDoBrasil.Api.Controllers.CardapioController.GetDiaAsync">
             <summary>
             Lista o cardápio do dia
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestauranteSaborDoBrasil.Api.Controllers.CardapioController.GetAsync(System.Guid)">
+            <summary>
+            Busca um cardápio por id
             </summary>
             <returns></returns>
         </member>

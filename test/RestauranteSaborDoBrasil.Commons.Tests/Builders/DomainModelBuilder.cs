@@ -40,5 +40,10 @@ namespace RestauranteSaborDoBrasil.Commons.Tests.Builders
             .RuleFor(x => x.EstoqueMaximo, f => f.Random.Float(11, 30))
             .RuleFor(x => x.EstoqueAtual, f => f.Random.Float(1, 100));
 
+        public static Mesa Mesa
+            => new Faker<Mesa>()
+            .RuleFor(x => x.Id, f => f.Random.Guid())
+            .RuleFor(x => x.Numero, f => f.Random.Int(1, 20).ToString())
+            .RuleFor(X => X.QuantidadeMax, f => f.Random.Int(1, 6));
     }
 }

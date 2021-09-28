@@ -36,7 +36,7 @@ namespace RestauranteSaborDoBrasil.Commons.Tests.Extensions
             return _inner.Execute<TResult>(expression);
         }
 
-        public IAsyncEnumerable<TResult> ExecuteAsync<TResult>(Expression expression)
+        public static IAsyncEnumerable<TResult> ExecuteAsync<TResult>(Expression expression)
         {
             return new TestAsyncEnumerable<TResult>(expression);
         }

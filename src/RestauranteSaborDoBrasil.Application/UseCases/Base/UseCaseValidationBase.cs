@@ -52,7 +52,6 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Base
                 Notifications.Handle(DomainNotification.Error("UseCaseValidationBase", errorMessage));
             }
 
-            var registerResponse = Mapper.Map<TResponse>(registerModel);
             return await BuscarPorId(registerModel.Id);
         }
 

@@ -29,11 +29,11 @@ namespace RestauranteSaborDoBrasil.Api.Extensions
             }
         }
 
-        private async Task HandleExceptionAsync(Exception exception, ILogger<ExceptionMiddlewareExtension> logger)
+        private static async Task HandleExceptionAsync(Exception exception, ILogger<ExceptionMiddlewareExtension> logger)
         {
             try
             {
-                logger.LogError(exception, exception.Message);
+                await Task.Run(() => logger.LogError(exception, exception.Message));
             }
             catch (Exception ex)
             {
