@@ -11,5 +11,6 @@ namespace RestauranteSaborDoBrasil.Domain.Models
         public int QuantidadeMax { get; set; }
 
         public virtual ICollection<HistoricoMesa> Historico { get; set; }
+        public virtual ICollection<ComandaMesa> Comandas { get; set; }
     }
 }
