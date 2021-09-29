@@ -395,9 +395,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("IngredienteId");
 
-                    b.HasIndex("ItemComandaId")
-                        .IsUnique()
-                        .HasFilter("[ItemComandaId] IS NOT NULL");
+                    b.HasIndex("ItemComandaId");
 
                     b.HasIndex("ItemNotaId")
                         .IsUnique()
@@ -577,8 +575,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("RestauranteSaborDoBrasil.Domain.Models.ItemComanda", "ItemComanda")
-                        .WithOne("MovimentacaoEstoque")
-                        .HasForeignKey("RestauranteSaborDoBrasil.Domain.Models.MovimentacaoEstoque", "ItemComandaId");
+                        .WithMany("MovimentacoesEstoque")
+                        .HasForeignKey("ItemComandaId");
 
                     b.HasOne("RestauranteSaborDoBrasil.Domain.Models.ItemNotaEntrada", "ItemNotaEntrada")
                         .WithOne("MovimentacaoEstoque")
@@ -668,7 +666,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
             modelBuilder.Entity("RestauranteSaborDoBrasil.Domain.Models.ItemComanda", b =>
                 {
-                    b.Navigation("MovimentacaoEstoque");
+                    b.Navigation("MovimentacoesEstoque");
                 });
 
             modelBuilder.Entity("RestauranteSaborDoBrasil.Domain.Models.ItemNotaEntrada", b =>

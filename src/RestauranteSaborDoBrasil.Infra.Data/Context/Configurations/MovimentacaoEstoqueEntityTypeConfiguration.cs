@@ -26,8 +26,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Context.Configurations
                 .HasForeignKey<MovimentacaoEstoque>(x => x.ItemNotaId);
 
             builder.HasOne(x => x.ItemComanda)
-                .WithOne(x => x.MovimentacaoEstoque)
-                .HasForeignKey<MovimentacaoEstoque>(x => x.ItemComandaId);
+                .WithMany(x => x.MovimentacoesEstoque)
+                .HasForeignKey(x => x.ItemComandaId);
         }
     }
 }

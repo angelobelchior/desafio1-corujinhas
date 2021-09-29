@@ -10,7 +10,7 @@ using RestauranteSaborDoBrasil.Infra.Data.Context;
 namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 {
     [DbContext(typeof(WritingDbContext))]
-    [Migration("20210928155638_AddControleEstoque")]
+    [Migration("20210929144327_AddControleEstoque")]
     partial class AddControleEstoque
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -397,9 +397,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
                     b.HasIndex("IngredienteId");
 
-                    b.HasIndex("ItemComandaId")
-                        .IsUnique()
-                        .HasFilter("[ItemComandaId] IS NOT NULL");
+                    b.HasIndex("ItemComandaId");
 
                     b.HasIndex("ItemNotaId")
                         .IsUnique()
@@ -579,8 +577,8 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("RestauranteSaborDoBrasil.Domain.Models.ItemComanda", "ItemComanda")
-                        .WithOne("MovimentacaoEstoque")
-                        .HasForeignKey("RestauranteSaborDoBrasil.Domain.Models.MovimentacaoEstoque", "ItemComandaId");
+                        .WithMany("MovimentacoesEstoque")
+                        .HasForeignKey("ItemComandaId");
 
                     b.HasOne("RestauranteSaborDoBrasil.Domain.Models.ItemNotaEntrada", "ItemNotaEntrada")
                         .WithOne("MovimentacaoEstoque")
@@ -670,7 +668,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
 
             modelBuilder.Entity("RestauranteSaborDoBrasil.Domain.Models.ItemComanda", b =>
                 {
-                    b.Navigation("MovimentacaoEstoque");
+                    b.Navigation("MovimentacoesEstoque");
                 });
 
             modelBuilder.Entity("RestauranteSaborDoBrasil.Domain.Models.ItemNotaEntrada", b =>

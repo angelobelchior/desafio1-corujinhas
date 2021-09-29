@@ -158,9 +158,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_MovimentacaoEstoque_ItemComandaId",
                 table: "MovimentacaoEstoque",
-                column: "ItemComandaId",
-                unique: true,
-                filter: "[ItemComandaId] IS NOT NULL");
+                column: "ItemComandaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovimentacaoEstoque_ItemNotaId",
