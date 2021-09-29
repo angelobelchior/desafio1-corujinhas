@@ -51,7 +51,7 @@ namespace RestauranteSaborDoBrasil.Commons.Tests.Base
             _mapper = mapperFactory.CreateMapper();
         }
 
-        protected void ErrorsContains(FluentValidation.Results.ValidationResult result, string wildcardMessage)
+        protected static void ErrorsContains(FluentValidation.Results.ValidationResult result, string wildcardMessage)
         {
             result.Errors.Select(x => x.ErrorMessage).Should()
                             .ContainMatch(wildcardMessage);

@@ -1,15 +1,15 @@
-﻿using Microsoft.Extensions.Logging;
-using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
-using System;
+﻿using RestauranteSaborDoBrasil.Domain.Core.Interfaces;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace RestauranteSaborDoBrasil.Domain.Core.Notifications
 {
     public class DomainNotificationHandler : IHandler<DomainNotification>
     {
         private List<DomainNotification> _notifications;
-        private ILogger<DomainNotificationHandler> _logger;
+        private readonly ILogger<DomainNotificationHandler> _logger;
 
         public DomainNotificationHandler(ILogger<DomainNotificationHandler> logger)
         {
@@ -41,12 +41,6 @@ namespace RestauranteSaborDoBrasil.Domain.Core.Notifications
         public virtual bool HasNotifications()
         {
             return GetNotifications().Any();
-        }
-
-        public void Dispose()
-        {
-            _notifications = null;
-            ClearNotifications();
         }
 
         public void ClearNotifications()
@@ -104,6 +98,18 @@ namespace RestauranteSaborDoBrasil.Domain.Core.Notifications
             }
 
             return problemDetails;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            _notifications = null;
+            ClearNotifications();
         }
     }
 }

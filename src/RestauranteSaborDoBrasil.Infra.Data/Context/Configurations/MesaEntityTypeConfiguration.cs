@@ -1,8 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RestauranteSaborDoBrasil.Domain.Models;
 using RestauranteSaborDoBrasil.Infra.Data.Context.Configurations.Base;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RestauranteSaborDoBrasil.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
 
@@ -21,7 +20,7 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Context.Configurations
             builder.HasData(ConfigureData());
         }
 
-        private List<Mesa> ConfigureData()
+        private static List<Mesa> ConfigureData()
         => new() {
             new Mesa{Id = new Guid( "8f32249b-0819-4272-8704-594511e24596" ), Numero = "01", QuantidadeMax = 6},
             new Mesa{Id = new Guid( "19e3e924-771e-4a85-852c-b8d0eb787284" ), Numero = "02", QuantidadeMax = 6},

@@ -13,6 +13,7 @@ namespace RestauranteSaborDoBrasil.Domain.Models
 
         public virtual ICollection<MovimentacaoEstoque> Movimentacoes { get; set; }
         public virtual ICollection<Receita> Receitas { get; set; }
+        public virtual ICollection<ItemNotaEntrada> ItemNotas { get; set; }
 
         public float EstoqueAtual 
             => Movimentacoes.Where(x => x.TipoMovimentacao.Equals(TipoMovimentacaoEstoque.Entrada)).Sum(x => x.Quantidade) 

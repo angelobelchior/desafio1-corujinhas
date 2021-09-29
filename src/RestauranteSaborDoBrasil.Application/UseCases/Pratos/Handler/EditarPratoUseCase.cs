@@ -36,7 +36,7 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.Pratos.Handler
                 return default;
 
             var receitaRequest = _mapper.Map<EditarReceitaRequest>(request);
-            var result = await _mediator.Send(receitaRequest);
+            var result = await _mediator.Send(receitaRequest, cancellationToken);
 
             if (!result)
             {

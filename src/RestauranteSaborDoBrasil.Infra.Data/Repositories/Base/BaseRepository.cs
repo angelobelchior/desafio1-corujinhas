@@ -61,9 +61,14 @@ namespace RestauranteSaborDoBrasil.Infra.Data.Repositories.Base
 
         public void Dispose()
         {
-            ReadingDb.Dispose();
-            WritingDb.Dispose();    
+            Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            ReadingDb.Dispose();
+            WritingDb.Dispose();
         }
     }
 }

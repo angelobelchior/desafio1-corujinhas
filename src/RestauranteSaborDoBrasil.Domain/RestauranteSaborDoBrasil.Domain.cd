@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.CommandRequest&lt;TResponse&gt;">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.CommandRequest&lt;TResponse&gt;" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
       <FileName>Core\Messages\CommandRequest.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.EventRequest">
-    <Position X="2.75" Y="6" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.EventRequest" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Messages\EventRequest.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.RequestBase">
-    <Position X="1.75" Y="4" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.RequestBase" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Messages\RequestBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestauranteSaborDoBrasil.Domain.Core.Messages.ResponseBase" Collapsed="true">
-    <Position X="18.75" Y="1.5" Width="1.5" />
+    <Position X="39.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Messages\ResponseBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Models.Entity">
-    <Position X="7.75" Y="0.5" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Core.Models.Entity" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
       <FileName>Core\Models\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestauranteSaborDoBrasil.Domain.Core.Notifications.DomainNotification" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.75" Y="0.5" Width="1.5" />
+    <Position X="39.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAQQAAAAAAABAAAAAAAAAAQAgAAAAIAA=</HashCode>
       <FileName>Core\Notifications\DomainNotification.cs</FileName>
@@ -46,7 +46,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="RestauranteSaborDoBrasil.Domain.Core.Notifications.DomainNotificationHandler" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="17" Y="1.5" Width="1.5" />
+    <Position X="37.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAACAEAAAAAAAAAAAAoBAYAAJAAIAAAAAAEIA=</HashCode>
       <FileName>Core\Notifications\DomainNotificationHandler.cs</FileName>
@@ -54,105 +54,161 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="RestauranteSaborDoBrasil.Domain.Core.Providers.DbSettings" Collapsed="true">
-    <Position X="17" Y="0.5" Width="1.5" />
+    <Position X="37.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Core\Providers\DbSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Cardapio">
-    <Position X="1" Y="1.75" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Cardapio" Collapsed="true">
+    <Position X="17.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Models\Cardapio.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Ingrediente">
-    <Position X="5.5" Y="1.75" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Comanda" Collapsed="true">
+    <Position X="28.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAABAAAAAAAAAEAAACAAAAAAAAEAAIAA=</HashCode>
+      <HashCode>AAAAAgIAAAAAEIAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Comanda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.ComandaMesa" Collapsed="true">
+    <Position X="35.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAQAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ComandaMesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Fornecedor" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIgAAAAAAAgAAAAAAAAAAEAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Fornecedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.HistoricoMesa" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAQAAAAIAAQAAAAAAAAAI=</HashCode>
+      <FileName>Models\HistoricoMesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Ingrediente" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAABAAAAAAAAIEAAACAAAAAAAAEAAIAA=</HashCode>
       <FileName>Models\Ingrediente.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Log">
-    <Position X="10.25" Y="4" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.ItemComanda" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAQAAAAAAAAAAAAEACAAAAAAAAAQAIAAAAA=</HashCode>
+      <FileName>Models\ItemComanda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.ItemNotaEntrada" Collapsed="true">
+    <Position X="24" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACABAAAAAAAAAAAACAAAAAAgAAABQAAAAAAA=</HashCode>
+      <FileName>Models\ItemNotaEntrada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Log" Collapsed="true">
+    <Position X="30.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Models\Log.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.MovimentacaoEstoque">
-    <Position X="12.25" Y="1.25" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Mesa" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIACAAQAAAAAAAAQAACAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAgBAAABAAA=</HashCode>
+      <FileName>Models\Mesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.MovimentacaoEstoque" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIACAIQAAAAAAAAQAACAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Models\MovimentacaoEstoque.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Prato">
-    <Position X="14.5" Y="0.5" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.NotaEntrada" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAQAAAEAAAEAAAAAAAAAAAAAAAAAACAAABAAA=</HashCode>
+      <FileName>Models\NotaEntrada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Prato" Collapsed="true">
+    <Position X="19.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAABAAAAAAAAIAAAAAAAAAAAAAAAAAEAIAA=</HashCode>
       <FileName>Models\Prato.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.PratoCardapio">
-    <Position X="3.25" Y="1.75" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.PratoCardapio" Collapsed="true">
+    <Position X="26.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAIAAAACAAAAAAAAAEAIAAAAA=</HashCode>
       <FileName>Models\PratoCardapio.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Receita">
-    <Position X="7.75" Y="3.5" Width="1.5" />
+  <Class Name="RestauranteSaborDoBrasil.Domain.Models.Receita" Collapsed="true">
+    <Position X="33" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAACACAAAAAAAAAQAIAAAAA=</HashCode>
       <FileName>Models\Receita.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="RestauranteSaborDoBrasil.Domain.Core.Interfaces.IDomainEvent" Collapsed="true">
-    <Position X="18.75" Y="2.75" Width="1.5" />
+    <Position X="39.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Interfaces\IDomainEvent.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RestauranteSaborDoBrasil.Domain.Core.Interfaces.IHandler&lt;T&gt;" Collapsed="true">
-    <Position X="17" Y="3.5" Width="1.5" />
+    <Position X="37.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAEAAAAAAAAAAAAoBAIAAJAAIAAAAAAEIA=</HashCode>
       <FileName>Core\Interfaces\IHandler.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.Base.IBaseRepository&lt;TEntity&gt;" Collapsed="true">
-    <Position X="17" Y="2.75" Width="1.5" />
+    <Position X="37.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAQAAAAEAAAEAAAAAAAAAEAAAIAA=</HashCode>
       <FileName>Interfaces\Repositories\Base\IBaseRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RestauranteSaborDoBrasil.Domain.Interfaces.Repositories.IUnitOfWork" Collapsed="true">
-    <Position X="18.75" Y="3.5" Width="1.5" />
+    <Position X="39.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Interfaces\Repositories\IUnitOfWork.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="RestauranteSaborDoBrasil.Domain.Enums.DiaSemana" Collapsed="true">
-    <Position X="17" Y="4.5" Width="1.5" />
+    <Position X="37.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAQAABABAAAAAAACACAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Enums\DiaSemana.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RestauranteSaborDoBrasil.Domain.Enums.TipoLog" Collapsed="true">
-    <Position X="18.75" Y="4.5" Width="1.5" />
+    <Position X="39.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Enums\TipoLog.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RestauranteSaborDoBrasil.Domain.Enums.TipoMovimentacaoEstoque" Collapsed="true">
-    <Position X="17" Y="5.25" Width="1.5" />
+    <Position X="37.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\TipoMovimentacaoEstoque.cs</FileName>
