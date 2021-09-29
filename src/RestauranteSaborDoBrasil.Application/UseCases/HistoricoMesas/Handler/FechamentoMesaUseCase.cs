@@ -29,7 +29,10 @@ namespace RestauranteSaborDoBrasil.Application.UseCases.HistoricoMesas.Handler
 
         public override async Task<FechamentoMesaResponse> Handle(FechamentoMesaRequest request, CancellationToken cancellationToken)
         {
-            var FechamentoHistorico = await _fechamentoMesaRepository.Where(x => x.MesaId == request.MesaId).OrderByDescending(x => x.DataFechamento).FirstOrDefaultAsync();
+            var FechamentoHistorico = await _fechamentoMesaRepository.GetAllQuery
+                .Where(x => x.MesaId == request.MesaId)
+                .OrderByDescending(x => x.DataFechamento)
+                .FirstOrDefaultAsync();
 
             if (FechamentoHistorico != null && FechamentoHistorico.DataFechamento == null)
             {
